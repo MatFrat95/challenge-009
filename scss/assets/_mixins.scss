@@ -5,3 +5,11 @@
 	align-items: center;
 	gap: 1rem;
 }
+
+
+@mixin gridDefault  ($gridCol, $gridRow) {
+	display: grid;
+	grid-template-columns: repeat($gridCol, 1fr);
+	grid-template-rows: repeat($gridRow, 1fr);
+	gap: 1rem;
+}
