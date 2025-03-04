@@ -6,10 +6,15 @@
 	gap: 1rem;
 }
 
-
-@mixin gridDefault  ($gridCol, $gridRow) {
+@mixin gridDefault($gridCol, $gridRow) {
 	display: grid;
 	grid-template-columns: repeat($gridCol, 1fr);
 	grid-template-rows: repeat($gridRow, 1fr);
 	gap: 1rem;
+}
+
+@mixin objectCenter($maxWidth, $objectWidth) {
+	margin: 0 auto;
+	max-width: $maxWidth;
+	width: $objectWidth;
 }

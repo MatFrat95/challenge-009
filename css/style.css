@@ -7,9 +7,11 @@
 }
 
 img {
-  max-width: 100%;
+  max-width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .attribution {
@@ -19,4 +21,114 @@ img {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.bento-grid {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.bento__container {
+  margin: 0 auto;
+  max-width: 28rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "column2" "column3" "column4" "column1";
+  gap: 2rem;
+}
+.bento__container .bento__container-box,
+.bento__container .inside-element {
+  display: grid;
+  gap: 2rem;
+}
+.bento__container .column-one {
+  grid-area: column1;
+}
+.bento__container .column-two {
+  grid-area: column2;
+}
+.bento__container .column-three {
+  grid-area: column3;
+}
+.bento__container .column-four {
+  grid-area: column4;
+}
+
+.social-media {
+  background-color: hsl(256, 67%, 59%);
+  padding: 3rem;
+  text-align: center;
+}
+
+.accounts {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.schedule {
+  background-color: hsl(39, 100%, 71%);
+}
+
+.optimize {
+  background-color: hsl(254, 88%, 90%);
+}
+
+.audience {
+  background-color: hsl(256, 67%, 59%);
+}
+
+.followers {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.create {
+  background-color: hsl(31, 66%, 93%);
+}
+
+.write {
+  background-color: hsl(39, 100%, 71%);
+}
+
+.bento__container-box--item {
+  border-radius: 1rem;
+}
+
+.heading-one {
+  margin-bottom: 0.5rem;
+  font-size: 3.75rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  line-height: 1;
+}
+
+.heading-two {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+.gold {
+  color: hsl(39, 100%, 71%);
+}
+
+.purple {
+  color: hsl(256, 67%, 59%);
+}
+
+.big {
+  font-size: 3.5rem;
+  display: block;
+}
+
+.text {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.text--white {
+  color: hsl(0, 0%, 100%);
+}
+
+.text--black {
+  color: hsl(0, 0%, 7%);
 }/*# sourceMappingURL=style.css.map */

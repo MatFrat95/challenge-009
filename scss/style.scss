@@ -2,4 +2,107 @@
 @import '../scss/assets/variables';
 @import '../scss/assets/reset';
 
+.bento-grid {
+	width: 100%;
+	font-family: 'DM Sans', sans-serif;
+}
+.bento__container {
+	@include objectCenter(28rem, 90%);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		'column2'
+		'column3'
+		'column4'
+		'column1';
+	gap: 2rem;
 
+	.bento__container-box,
+	.inside-element {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.column-one {
+		grid-area: column1;
+	}
+	.column-two {
+		grid-area: column2;
+	}
+	.column-three {
+		grid-area: column3;
+	}
+	.column-four {
+		grid-area: column4;
+	}
+}
+
+.social-media {
+	background-color: $Purple500;
+    padding: $paddingBig;
+    text-align: center;
+}
+.accounts {
+	background-color: $White;
+}
+.schedule {
+	background-color: $Yellow500;
+}
+.optimize {
+	background-color: $Purple100;
+}
+.audience {
+	background-color: $Purple500;
+}
+.followers {
+	background-color: $White;
+}
+.create {
+	background-color: $Yellow100;
+}
+.write {
+	background-color: $Yellow500;
+}
+
+.bento__container-box--item {
+	border-radius: 1rem;
+}
+// headings and color spans inside hedings.....
+.heading-one {
+    margin-bottom: .5rem;
+	font-size: 3.75rem;
+	font-weight: $fontWeight500;
+	color: $White;
+    line-height: 1;
+    
+}
+.heading-two {
+	font-size: 2.25rem;
+	font-weight: $fontWeight500;
+}
+
+// spans
+.gold {
+	color: $Yellow500;
+}
+.purple {
+	color: $Purple500;
+}
+.big {
+    font-size: 3.5rem;
+    display: block;
+}
+
+
+// text types
+.text {
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: $fontWeight400;
+}
+.text--white {
+	color: $White;
+}
+.text--black {
+	color: $Black;
+}
