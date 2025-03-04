@@ -1,13 +1,17 @@
 @import '../scss/assets/mixins';
 @import '../scss/assets/variables';
 @import '../scss/assets/reset';
-
+body {
+	background-color: #f2f2f2;
+	font-size: 66px;
+}
 .bento-grid {
+	padding: 4rem 0;
 	width: 100%;
 	font-family: 'DM Sans', sans-serif;
 }
 .bento__container {
-	@include objectCenter(28rem, 90%);
+margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas:
@@ -39,8 +43,8 @@
 
 .social-media {
 	background-color: $Purple500;
-    padding: $paddingBig;
-    text-align: center;
+	padding: $element-Big;
+	text-align: center;
 }
 .accounts {
 	background-color: $White;
@@ -65,16 +69,16 @@
 }
 
 .bento__container-box--item {
+	padding: 1.25rem;
 	border-radius: 1rem;
 }
 // headings and color spans inside hedings.....
 .heading-one {
-    margin-bottom: .5rem;
+	margin-bottom: $element-Regular;
 	font-size: 3.75rem;
 	font-weight: $fontWeight500;
 	color: $White;
-    line-height: 1;
-    
+	line-height: 1;
 }
 .heading-two {
 	font-size: 2.25rem;
@@ -89,10 +93,9 @@
 	color: $Purple500;
 }
 .big {
-    font-size: 3.5rem;
-    display: block;
+	font-size: 3.5rem;
+	display: block;
 }
-
 
 // text types
 .text {
@@ -106,3 +109,10 @@
 .text--black {
 	color: $Black;
 }
+
+
+
+
+
+
+@import './assets/media';

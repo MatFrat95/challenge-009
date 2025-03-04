@@ -1,5 +1,3 @@
-
-
 $Purple100: hsl(254, 88%, 90%);
 $Purple500: hsl(256, 67%, 59%);
 
@@ -11,10 +9,11 @@ $Black: hsl(0, 0%, 7%);
 
 // font weights
 
-$fontWeight400:400;
-$fontWeight500:500;
+$fontWeight400: 400;
+$fontWeight500: 500;
 
-// paddings for cards
-$paddingSmall:1rem;
-$paddingRegular:2rem;
-$paddingBig:3rem;
+// sizes of elements
+$element-xs: 0.5rem;
+$element-Small: 1rem;
+$element-Regular: 2rem;
+$element-Big: 3rem;

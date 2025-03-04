@@ -7,7 +7,7 @@
 }
 
 img {
-  max-width: 80%;
+  max-width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -23,15 +23,19 @@ img {
   color: hsl(228, 45%, 44%);
 }
 
+body {
+  background-color: #f2f2f2;
+  font-size: 66px;
+}
+
 .bento-grid {
+  padding: 4rem 0;
   width: 100%;
   font-family: "DM Sans", sans-serif;
 }
 
 .bento__container {
   margin: 0 auto;
-  max-width: 28rem;
-  width: 90%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "column2" "column3" "column4" "column1";
@@ -90,11 +94,12 @@ img {
 }
 
 .bento__container-box--item {
+  padding: 1.25rem;
   border-radius: 1rem;
 }
 
 .heading-one {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   font-size: 3.75rem;
   font-weight: 500;
   color: hsl(0, 0%, 100%);
@@ -131,4 +136,33 @@ img {
 
 .text--black {
   color: hsl(0, 0%, 7%);
+}
+
+@media screen and (min-width: 42rem) {
+  .bento__container {
+    max-width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 18rem 18rem 18rem 18rem;
+    grid-template-areas: " column2 column3" " column2 column3" " column4 column4" "column1 column1";
+  }
+  .inside-element, .column-one {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .bento__container {
+    max-width: 90rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 18rem 18rem 18rem;
+    grid-template-areas: "column1 column2 column3" "column1 column2 column3" "column1 column4 column4";
+  }
+  .inside-element {
+    grid-template-columns: 1fr 1fr;
+  }
+  .inside-element:nth-child(1) {
+    grid-template-columns: 0.935fr 2fr;
+  }
+  .column-one {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

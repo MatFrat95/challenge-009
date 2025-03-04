@@ -1,0 +1,45 @@
+@media screen and (min-width:42rem) {
+    .bento__container {
+        max-width: 100%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 18rem 18rem 18rem 18rem;
+        grid-template-areas:
+		' column2 column3'
+		' column2 column3'
+		' column4 column4'
+        'column1 column1'
+		;
+    }
+
+    .inside-element, .column-one {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:64rem) {
+    .bento__container {
+        max-width: 90rem;
+        grid-template-columns: 1fr 2fr 1fr ;
+        grid-template-rows: 18rem 18rem 18rem;
+        grid-template-areas:
+		'column1 column2 column3'
+		'column1 column2 column3'
+		'column1 column4 column4'
+		;
+    }
+
+    .inside-element {
+        grid-template-columns: 1fr 1fr;
+    }
+    .inside-element:nth-child(1) {
+       grid-template-columns: .935fr 2fr;
+    }
+    .column-one {
+        grid-template-columns: 1fr;
+    }
+}
