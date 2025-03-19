@@ -7,10 +7,9 @@
 }
 
 img {
-  max-width: 40%;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
   margin: 0 auto;
 }
 
@@ -25,90 +24,28 @@ img {
 
 body {
   background-color: #f2f2f2;
-  font-size: 66px;
-}
-
-.bento-grid {
-  padding: 4rem 0;
-  width: 100%;
-  font-family: "DM Sans", sans-serif;
-}
-
-.bento__container {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "column2" "column3" "column4" "column1";
-  gap: 2rem;
-}
-.bento__container .bento__container-box,
-.bento__container .inside-element {
-  display: grid;
-  gap: 2rem;
-}
-.bento__container .column-one {
-  grid-area: column1;
-}
-.bento__container .column-two {
-  grid-area: column2;
-}
-.bento__container .column-three {
-  grid-area: column3;
-}
-.bento__container .column-four {
-  grid-area: column4;
-}
-
-.social-media {
-  background-color: hsl(256, 67%, 59%);
-  padding: 3rem;
-  text-align: center;
-}
-
-.accounts {
-  background-color: hsl(0, 0%, 100%);
-}
-
-.schedule {
-  background-color: hsl(39, 100%, 71%);
-}
-
-.optimize {
-  background-color: hsl(254, 88%, 90%);
-}
-
-.audience {
-  background-color: hsl(256, 67%, 59%);
-}
-
-.followers {
-  background-color: hsl(0, 0%, 100%);
-}
-
-.create {
-  background-color: hsl(31, 66%, 93%);
-}
-
-.write {
-  background-color: hsl(39, 100%, 71%);
-}
-
-.bento__container-box--item {
-  padding: 1.25rem;
-  border-radius: 1rem;
 }
 
 .heading-one {
-  margin-bottom: 2rem;
-  font-size: 3.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 3.25rem;
   font-weight: 500;
   color: hsl(0, 0%, 100%);
   line-height: 1;
 }
 
 .heading-two {
-  font-size: 2.25rem;
   font-weight: 500;
+  line-height: 0.8;
+}
+.heading-two--small {
+  font-size: 2rem;
+}
+.heading-two--big {
+  font-size: 2.75rem;
+}
+.heading-two--very-big {
+  font-size: 4.5rem;
 }
 
 .gold {
@@ -138,20 +75,199 @@ body {
   color: hsl(0, 0%, 7%);
 }
 
-@media screen and (min-width: 42rem) {
+.bento-grid {
+  padding: 2rem;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.bento__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "column2" "column3" "column4" "column1";
+  gap: 2rem;
+}
+.bento__container .bento__container-box,
+.bento__container .inside-element {
+  display: grid;
+  gap: 2rem;
+}
+.bento__container .column-one {
+  grid-area: column1;
+}
+.bento__container .column-two {
+  grid-area: column2;
+}
+.bento__container .column-three {
+  grid-area: column3;
+}
+.bento__container .column-four {
+  grid-area: column4;
+}
+
+.bento__container-box--item {
+  padding: 1.25rem;
+  border-radius: 0.65rem;
+}
+
+.create {
+  padding: 3rem;
+  background-color: hsl(31, 66%, 93%);
+}
+.create img {
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.write {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: hsl(39, 100%, 71%);
+  gap: 2rem;
+}
+.write img {
+  max-width: 80%;
+}
+
+.social-media {
+  display: grid;
+  gap: 1.5rem;
+  gap: 0.5rem;
+  text-align: center;
+  background-color: hsl(256, 67%, 59%);
+  padding: 3rem;
+}
+.social-media img {
+  max-width: 13rem;
+}
+
+.accounts {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.schedule {
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(39, 100%, 71%);
+}
+.schedule img {
+  position: relative;
+  max-width: 70%;
+  bottom: -3rem;
+  left: 0rem;
+}
+
+.optimize {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: hsl(254, 88%, 90%);
+}
+.optimize .text {
+  font-size: 1.5rem;
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.audience {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.audience .text {
+  text-align: left;
+}
+.audience img {
+  max-width: 60%;
+}
+
+.followers {
+  padding: 2rem 20%;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  gap: 3rem;
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 900px) {
   .bento__container {
-    max-width: 100%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 18rem 18rem 18rem 18rem;
-    grid-template-areas: " column2 column3" " column2 column3" " column4 column4" "column1 column1";
+    grid-template-areas: "column2 column3" "column2 column3" "column4 column4" "column1 column1";
   }
-  .inside-element, .column-one {
+  .inside-element,
+  .column-one,
+  .write {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 18rem;
+  }
+  .create {
+    display: grid;
+  }
+  .create .heading-two {
+    font-size: 2.25rem;
+  }
+  .create img {
+    max-width: 80%;
+    justify-self: center;
+  }
+  .write {
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+  .write img {
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .accounts {
+    position: relative;
+    overflow: hidden;
+  }
+  .accounts img {
+    position: relative;
+    max-width: 22rem;
+    margin-bottom: 2rem;
+  }
+  .schedule img {
+    max-width: 87%;
+    bottom: -2rem;
+  }
+  .optimize {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  .optimize .text {
+    max-width: 100%;
+    line-height: 1;
+    text-align: left;
+  }
+  .optimize img {
+    position: relative;
+    max-width: 140%;
+  }
+  .followers {
+    padding: 2rem;
+    order: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .followers .heading-two {
+    text-align: left;
+    align-self: center;
   }
 }
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 74rem) {
   .bento__container {
-    max-width: 90rem;
+    max-width: 76rem;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 18rem 18rem 18rem;
     grid-template-areas: "column1 column2 column3" "column1 column2 column3" "column1 column4 column4";
@@ -160,9 +276,26 @@ body {
     grid-template-columns: 1fr 1fr;
   }
   .inside-element:nth-child(1) {
-    grid-template-columns: 0.935fr 2fr;
+    grid-template-columns: 0.92fr 2fr;
   }
   .column-one {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .create img {
+    max-width: 100%;
+  }
+  .write {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    padding: 2rem 1rem 2rem 2rem;
+  }
+  .schedule img {
+    max-width: 100%;
+  }
+  .audience img {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

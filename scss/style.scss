@@ -1,17 +1,69 @@
 @import '../scss/assets/mixins';
 @import '../scss/assets/variables';
 @import '../scss/assets/reset';
+
 body {
 	background-color: #f2f2f2;
-	font-size: 66px;
 }
+
+// headings and color spans inside hedings.....
+.heading-one {
+	margin-bottom: 0.5rem;
+	font-size: 3.25rem;
+	font-weight: $fontWeight500;
+	color: $White;
+	line-height: 1;
+}
+.heading-two {
+	font-weight: $fontWeight500;
+	line-height: 0.8;
+
+	&--small {
+		font-size: 2rem;
+	}
+
+	&--big {
+		font-size: 2.75rem;
+	}
+	&--very-big {
+		font-size: 4.5rem;
+	}
+}
+
+// spans
+.gold {
+	color: $Yellow500;
+}
+.purple {
+	color: $Purple500;
+}
+.big {
+	font-size: 3.5rem;
+	display: block;
+}
+
+// text types
+.text {
+	
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: $fontWeight400;
+}
+.text--white {
+	color: $White;
+}
+.text--black {
+	color: $Black;
+}
+
+// bento element settings ......................
 .bento-grid {
-	padding: 4rem 0;
+	padding: 2rem;
 	width: 100%;
 	font-family: 'DM Sans', sans-serif;
 }
 .bento__container {
-margin: 0 auto;
+	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas:
@@ -29,6 +81,7 @@ margin: 0 auto;
 
 	.column-one {
 		grid-area: column1;
+		// grid-template-rows: 1fr 1fr;
 	}
 	.column-two {
 		grid-area: column2;
@@ -41,78 +94,110 @@ margin: 0 auto;
 	}
 }
 
+.bento__container-box--item {
+	padding: 1.25rem;
+	border-radius: 0.65rem;
+}
+
+// BENTO EACH ELEMENTS INDIVIDUAL STYLING BY COLUMNS  ...................
+
+// column 1!!!!!
+.create {
+	padding: 3rem;
+
+	background-color: $Yellow100;
+	img {
+		margin-top: 2rem;
+		max-width: 100%;
+	}
+}
+.write {
+	// display: grid;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+
+	background-color: $Yellow500;
+
+	gap: 2rem;
+	img {
+		// margin-top: 2rem;
+		max-width: 80%;
+	}
+}
+
+// column 2!!!!!!!!
+
 .social-media {
+	@include contentCenterGrid;
+	gap: 0.5rem;
+	text-align: center;
+
 	background-color: $Purple500;
 	padding: $element-Big;
-	text-align: center;
+
+	img {
+		max-width: 13rem;
+	}
 }
+
 .accounts {
 	background-color: $White;
 }
 .schedule {
+	position: relative;
+	overflow: hidden;
+
 	background-color: $Yellow500;
+
+	img {
+		position: relative;
+		max-width: 70%;
+		bottom: -3rem;
+		left: 0rem;
+	}
 }
+
+// column 3!!!!!!!!
 .optimize {
+	@include contentCenterGrid;
+	text-align: center;
+	padding: 2rem;
 	background-color: $Purple100;
+
+	.text {
+		font-size: 1.5rem;
+		max-width: 90%;
+		margin-inline: auto;
+	}
 }
+
+// column 4!!!!!!!!
 .audience {
-	background-color: $Purple500;
+	padding: 2rem;
+	@include contentCenterGrid;
+	
+	background-color: $White;
+	
+	.text {
+		text-align: left;
+	}
+	img {
+		max-width: 60%;
+	}
+	// grid-template-columns: repeat(2, 1fr);
 }
 .followers {
-	background-color: $White;
-}
-.create {
-	background-color: $Yellow100;
-}
-.write {
-	background-color: $Yellow500;
-}
+	padding: 2rem 20%;
 
-.bento__container-box--item {
-	padding: 1.25rem;
-	border-radius: 1rem;
-}
-// headings and color spans inside hedings.....
-.heading-one {
-	margin-bottom: $element-Regular;
-	font-size: 3.75rem;
-	font-weight: $fontWeight500;
-	color: $White;
-	line-height: 1;
-}
-.heading-two {
-	font-size: 2.25rem;
-	font-weight: $fontWeight500;
-}
-
-// spans
-.gold {
-	color: $Yellow500;
-}
-.purple {
-	color: $Purple500;
-}
-.big {
-	font-size: 3.5rem;
-	display: block;
-}
-
-// text types
-.text {
-	font-size: 1.25rem;
 	text-align: center;
-	font-weight: $fontWeight400;
-}
-.text--white {
+	display: grid;
+	place-content: center;
+	gap: 3rem;
+
+	background-color: $Purple500;
 	color: $White;
 }
-.text--black {
-	color: $Black;
-}
-
-
-
-
-
 
 @import './assets/media';

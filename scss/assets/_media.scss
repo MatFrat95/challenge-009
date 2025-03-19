@@ -1,45 +1,144 @@
-@media screen and (min-width:42rem) {
-    .bento__container {
-        max-width: 100%;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 18rem 18rem 18rem 18rem;
-        grid-template-areas:
-		' column2 column3'
-		' column2 column3'
-		' column4 column4'
-        'column1 column1'
-		;
-    }
+@media screen and (min-width: 900px) {
+	.bento__container {
+		// max-width: 100%;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 18rem 18rem 18rem 18rem;
+		grid-template-areas:
+			'column2 column3'
+			'column2 column3'
+			'column4 column4'
+			'column1 column1';
+	}
 
-    .inside-element, .column-one {
-        grid-template-columns: 1fr 1fr;
-    }
+	.inside-element,
+	.column-one,
+	.write {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 18rem;
+	}
+
+	// SINGLE COLUMN ELEMENTS SETTINGS __________
+	// column 1 .....................
+	.create {
+		display: grid;
+
+		.heading-two {
+			font-size: 2.25rem;
+		}
+		img {
+			max-width: 80%;
+			justify-self: center;
+		}
+	}
+	.write {
+		padding: 0 2rem;
+		gap: 1rem;
+		img {
+			margin-top: 0;
+			max-width: 100%;
+		}
+	}
+	// column 2 ..................
+	.accounts {
+		position: relative;
+		overflow: hidden;
+		img {
+			position: relative;
+			max-width: 22rem;
+			margin-bottom: 2rem;
+		}
+	}
+	.schedule {
+		img {
+			max-width: 87%;
+			bottom: -2rem;
+		}
+	}
+	// column 3.......................
+	.optimize {
+		position: relative;
+		overflow: hidden;
+		text-align: left;
+
+		.text {
+			max-width: 100%;
+			line-height: 1;
+			text-align: left;
+		}
+		img {
+			position: relative;
+			max-width: 140%;
+        
+		}
+	}
+
+	// column 4 ......................
+	.followers {
+		padding: 2rem;
+		order: 1;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		.heading-two {
+			text-align: left;
+			align-self: center;
+		}
+	}
 }
 
+@media screen and (min-width: 74rem) {
+	// BASIC ELEMENT SETTINGS ____________
+
+	.bento__container {
+		max-width: 76rem;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 18rem 18rem 18rem;
+		grid-template-areas:
+			'column1 column2 column3'
+			'column1 column2 column3'
+			'column1 column4 column4';
+	}
+
+	.inside-element {
+		grid-template-columns: 1fr 1fr;
+	}
+	.inside-element:nth-child(1) {
+		grid-template-columns: 0.92fr 2fr;
+	}
+	.column-one {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	// SINGLE COLUMN ELEMENTS SETTINGS __________
+	// column 1 .....................
+	.create {
+		img {
+			max-width: 100%;
+		}
+	}
+	.write {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 0;
+		padding: 2rem 1rem 2rem 2rem;
+	}
 
 
-
-
-
-@media screen and (min-width:64rem) {
-    .bento__container {
-        max-width: 90rem;
-        grid-template-columns: 1fr 2fr 1fr ;
-        grid-template-rows: 18rem 18rem 18rem;
-        grid-template-areas:
-		'column1 column2 column3'
-		'column1 column2 column3'
-		'column1 column4 column4'
-		;
+    // column 2 .............................
+    .schedule {
+        img {
+            max-width: 100%;
+            
+        }
     }
 
-    .inside-element {
-        grid-template-columns: 1fr 1fr;
-    }
-    .inside-element:nth-child(1) {
-       grid-template-columns: .935fr 2fr;
-    }
-    .column-one {
-        grid-template-columns: 1fr;
+
+    // column 4 .......................
+    .audience {
+        img {
+            max-width: 100%;
+        }
     }
 }
