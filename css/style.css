@@ -197,6 +197,9 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+  .bento-grid {
+    padding: 5rem;
+  }
   .bento__container {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 18rem 18rem 18rem 18rem;

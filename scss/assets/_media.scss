@@ -1,4 +1,7 @@
 @media screen and (min-width: 900px) {
+	.bento-grid {
+		padding: 5rem;
+	}
 	.bento__container {
 		// max-width: 100%;
 		grid-template-columns: 2fr 1fr;
@@ -69,7 +72,6 @@
 		img {
 			position: relative;
 			max-width: 140%;
-        
 		}
 	}
 
@@ -125,20 +127,17 @@
 		padding: 2rem 1rem 2rem 2rem;
 	}
 
+	// column 2 .............................
+	.schedule {
+		img {
+			max-width: 100%;
+		}
+	}
 
-    // column 2 .............................
-    .schedule {
-        img {
-            max-width: 100%;
-            
-        }
-    }
-
-
-    // column 4 .......................
-    .audience {
-        img {
-            max-width: 100%;
-        }
-    }
+	// column 4 .......................
+	.audience {
+		img {
+			max-width: 100%;
+		}
+	}
 }
